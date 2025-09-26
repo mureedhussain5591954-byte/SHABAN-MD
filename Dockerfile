@@ -1,10 +1,4 @@
-FROM node:20-slim
-
-# Install system dependencies (for native modules like sqlite3, ffmpeg etc.)
-RUN apt-get update && apt-get install -y \
-  git \
-  python3 \
-  make \
+FROM node:2
   g++ \
   ffmpeg \
   && rm -rf /var/lib/apt/lists/*
